@@ -31,10 +31,15 @@ try {
 
 		const divBook = document.createElement("div");
 
+		
+		
+
 		divBook.innerHTML = `
 		<details>
 		<summary>${book.Title}</summary>
-		<p>Informacion aqui</p>
+		<p><strong>Autor:</strong> ${book.Author}</p>
+		<p><strong>Paginas:</strong> ${book.PagesInFile}</p>
+		<p><a href="${book.downloadUrl}" target="_blank" rel="noopener noreferrer">Descargar libro</a></p>
 	  </details>
 	  <hr>`
 	  divBook.style.marginBottom = `15px`;
