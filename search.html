@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PICO CSS FRAMEWORK  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/images/logo.png"> 
+    <title>BookFinder - Apartado de busqueda</title>
+    <style>
+      #change-theme:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header style="position: sticky; top: 0; background-color: #fff;" class="container">
+      <nav>
+        <ul>
+          <li><a href="/book-finder/"><strong>BookFinder</strong></a></li>
+        </ul>
+        <ul>
+          <li><a id="change-theme" class="contrast"><i id="icon-theme" class="fa-solid fa-sun"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+        <div style="display: flex; justify-content: center; height: 65vh;">
+        <div style="align-self: center; text-align: center;">
+            <h2>Busca tu libro favorito. <br>O encuentra tu libro favorito.</h2>
+            <form>
+                <input
+  type="search"
+  name="book"
+  placeholder="Don quijote"
+  aria-label="Search"
+/>
+            </form>
+        </div>
+        </div>
+    </main>
+
+    <footer class="container" style="text-align: center">
+      <b>Hecho con amor por <a href="https://estefspace.github.io/website/">estefdev</a></b>
+    </footer>
+
+    <dialog id="book-error">
+      <article>
+        <header>
+          <button id="close-dialog-error" aria-label="Close" rel="prev"></button>
+          <h2>¡Hubo un incoveniente!</h2>
+        </header>
+        <p>
+          Parece que el libro que intentas te buscar no existe, no se encontro, verifica que lo hayas escrito correctamente o bien intenta buscar otro titulo.
+        </p>
+      </article>
+    </dialog>
+
+    <dialog id="book-view">
+      <article>
+        <header>
+          <button id="close-dialog-view" aria-label="Close" rel="prev"></button>
+          
+            <hgroup>
+              <h2>Se encontraron <span id="number-books"></span> libro(s).</h2>
+              <p>Revisa si alguno de estos es el que buscas. ¡Recuerda! No todos los libros estan aqui en BookFinder.</p>
+            </hgroup>
+         
+        </header>
+        <div id="books">
+
+        </div>
+      </article>
+    </dialog>
+
+    
+    <script src="assets/javascript/changeTheme.js"></script>
+    <script src="assets/javascript/findBook.js"></script>
+  </body>
+</html>

@@ -5,13 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- PICO CSS FRAMEWORK  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    >
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/images/logo.png"> 
     <title>BookFinder - Aplicacion web para buscar libros</title>
+    <style>
+      #change-theme:hover {
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <header class="container"></header>
+    <header style="position: sticky; top: 0; background-color: #fff;" class="container">
+      <nav>
+        <ul>
+          <li><a href="/book-finder/"><strong>BookFinder</strong></a></li>
+        </ul>
+        <ul>
+          <li><a id="change-theme" class="contrast"><i id="icon-theme" class="fa-solid fa-sun"></i></a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <main class="container"></main>
+    <main class="container">
+      <div style="display: flex; justify-content: center; align-items: center; height: 85vh;">
+      <div>
+        <div class="grid">
+          <div>
+            <hgroup>
+              <h1>BookFinder es una plataforma <br><span id="typed"></span>.</h1>
+              <p>¿Que es BookFinder? Es una app web hecha con HTML, CSS y JS por <a href="https://estefspace.github.io/website/">estefdev</a> en el cual puedes buscar algun libro que conozcas. No todos estan, puede que no encuentres el que necesitas.</p>
+              <hr>
+              <a href="/book-finder/search" style="color: white;" role="button">Empieza a buscar tu libro</a>
+            </hgroup>
+          </div>
+          <div style="display: flex; justify-content: center;">
+            <div>
+              <img src="assets/images/hero.png" style="width: 250px; height: 250px;" alt="Elizabeth leyendo un libro." title="Elizabeth">
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
 
-    <footer class="container"></footer>
+      <div>
+        <hgroup>
+          <h2>¿Porque usar BookFinder?</h2>
+          <p>Aqui te mostramos el porque usar esta plataforma a diferencia de otras competencias.</p>
+          <hr>
+        </hgroup>
+        <div class="grid">
+          <div>
+            <article>
+              <header>
+                <h3>Descarga tus libros gratis</h3>
+              </header>
+              <p>Tienes la oportunidad de descargar los libros totalmente gratis, el poder leer y tener conocimientos debe ser gratis. Todos por igual y aqui se demuestra.</p>
+            </article>
+          </div>
+          <div>
+            <article>
+              <header>
+                <h3>Busca libros en segundos</h3>
+              </header>
+              <p>A diferencia de otras competencias, BookFinder encontrara tu libro en segundos, aqui no hay latencia alta que te impida buscar tus libros y descargarlos.</p>
+            </article>
+          </div>
+        </div>
+        <div>
+          <article>
+            <header>
+              <h3>Plataforma gratis y en español</h3>
+            </header>
+            <p>Esta plataforma es totalmente gratuito y abierto para todo el mundo, incluso es de codigo abierto para quien quiera revisar y saber como es que se ha hecho esto.</p>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container" style="text-align: center">
+      <b>Hecho con amor por <a href="https://estefspace.github.io/website/">estefdev</a></b>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="assets/javascript/changeTheme.js"></script>
+    <script src="assets/javascript/typed.js"></script>
   </body>
 </html>
