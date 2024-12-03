@@ -32,7 +32,8 @@ try {
 		const divBook = document.createElement("div");
 
 		if(book.PagesInFile === 0) { 
-			return divBook.innerHTML = `
+			
+			divBook.innerHTML = `
 			<details>
 		<summary>${book.Title}</summary>
 		<p><strong>Autor:</strong> ${book.Author}</p>
