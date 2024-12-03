@@ -32,7 +32,13 @@ try {
 		const divBook = document.createElement("div");
 
 		if(book.PagesInFile === 0) { 
-			return	
+			return divBook.innerHTML = `
+			<details>
+		<summary>${book.Title}</summary>
+		<p><strong>Autor:</strong> ${book.Author}</p>
+		<p><a href="${book.downloadUrl}" disabled target="_blank" rel="noopener noreferrer">Descargar libro</a></p>
+	  </details>
+	  <hr>`
 		}
 		
 
